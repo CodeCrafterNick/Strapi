@@ -47,7 +47,8 @@
       "type": "customField",
       "options": {
         "idLength": 13
-      }
+      },
+      "customField": "plugin::field-nanoid.nanoid"
     },
     "where": {
       "type": "string"
