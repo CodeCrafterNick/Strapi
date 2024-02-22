@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "outfits",
+  "info": {
+    "singularName": "outfit",
+    "pluralName": "outfits",
+    "displayName": "Outfit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::item.item",
+      "inversedBy": "outfits"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "uniqueID": {
+      "type": "uid",
+      "required": false
+    },
+    "uniID": {
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid",
+      "options": {
+        "uuid-format": "^[a-zA-Z0-9_]{5,15}$"
+      }
+    },
+    "shortID": {
+      "type": "customField",
+      "options": {
+        "idLength": 13
+      },
+      "customField": "plugin::field-nanoid.nanoid"
+    },
+    "where": {
+      "type": "string"
+    },
+    "while": {
+      "type": "string"
+    },
+    "dateWorn": {
+      "type": "date"
+    },
+    "person": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person.person",
+      "inversedBy": "outfits"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "outfits"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_brands_brand_lists",
+  "info": {
+    "displayName": "Brand List",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "brandsShown": {
+      "type": "integer"
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand"
+    }
+  }
+}
