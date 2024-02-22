@@ -39,7 +39,7 @@ module.exports = ({ env }) => ({
       }
     }
   },
-  "sitemap": {
+  /*"sitemap": {
     enabled: true,
     config: {
       cron: "0 0 0 * * *",
@@ -50,7 +50,7 @@ module.exports = ({ env }) => ({
       allowedFields: ["id", "uid", "slug", "categories", "category", "brand", "person", "outfit", "page", "item", "color", "tag"],
       excludedTypes: []
     }
-  },
+  },*/
   rest: {
     defaultLimit: 140, //change this
     maxLimit: 1000,
@@ -97,11 +97,6 @@ module.exports = ({ env }) => ({
           ]
         }
       }
-    }
-  },
-  treblle: {
-    config: {
-      routesToMonitor: ["api"]
     }
   },
   "import-export-entries": {
@@ -171,20 +166,6 @@ module.exports = ({ env }) => ({
         defaultReplyTo: 'info@shoptheoutfit.com',
         testAddress: 'nick@craftingcode.com',
       },
-    },
-  },
-  "netlify-deployments": {
-    enabled: true,
-    config: {
-      accessToken: env('NETLIFY_ACCESS_TOKEN'),
-      sites: [
-        {
-          name: 'STO',
-          id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-          buildHook: "https://api.netlify.com/build_hooks/<hook_id>",
-          branch: 'master' // optional
-        }
-      ]
     },
   },
   upload: {
