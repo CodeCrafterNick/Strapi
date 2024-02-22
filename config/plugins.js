@@ -111,7 +111,7 @@ module.exports = ({ env }) => ({
       serverPublicHostname: "http://127.0.01:1337" // default: "".
     }
   },
-  search: {
+  /*search: {
     enabled: true,
     config: {
       provider: "algolia",
@@ -137,7 +137,7 @@ module.exports = ({ env }) => ({
         }
         ]
     }
-  },
+  },*/
   ezforms:{
     config:{
       captchaProvider: {
