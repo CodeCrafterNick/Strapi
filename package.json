@@ -11,8 +11,6 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@mattie-bundle/strapi-plugin-search": "^1.0.0-alpha.3",
-    "@mattie-bundle/strapi-provider-search-algolia": "^1.0.0-alpha.3",
     "@strapi/plugin-cloud": "4.19.1",
     "@strapi/plugin-color-picker": "^4.19.1",
     "@strapi/plugin-graphql": "^4.19.1",
@@ -23,8 +21,6 @@
     "@strapi/provider-email-nodemailer": "^4.20.1",
     "@strapi/provider-upload-cloudinary": "^4.20.2",
     "@strapi/strapi": "4.19.1",
-    "@treblle/strapi": "^0.0.12",
-    "better-sqlite3": "8.6.0",
     "nanoid": "^5.0.5",
     "pg": "8.11.3",
     "react": "^18.0.0",
@@ -33,11 +29,7 @@
     "short-unique-id": "^5.0.3",
     "shortid": "^2.2.16",
     "strapi-advanced-uuid": "^1.2.0",
-    "strapi-auto-nanoid": "^0.0.2",
-    "strapi-auto-uuid": "^0.0.8",
-    "strapi-blurhash": "^1.1.1",
     "strapi-plugin-ezforms": "^0.1.7",
-    "strapi-plugin-generate-schema": "^0.0.1",
     "strapi-plugin-import-export-entries": "^1.23.1",
     "strapi-plugin-menus": "^1.6.1",
     "strapi-plugin-netlify-deployments": "^2.0.2",
@@ -55,7 +47,7 @@
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
   },
   "engines": {
-    "node": ">=18.0.0 <=20.x.x"
+    "node": ">=16.0.0 <=20.x.x"
   },
   "license": "MIT"
 }
