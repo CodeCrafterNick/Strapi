@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Blue",
+        "Green",
+        "White",
+        "Beige",
+        "Brown",
+        "Black",
+        "Red",
+        "Purple",
+        "Aqua"
+      ]
+    },
+    "link": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "affiliateLink": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)"
+    },
+    "slug": {
+      "type": "string",
+      "unique": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "outfits": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::outfit.outfit",
+      "mappedBy": "items"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "items"
+    },
+    "similars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::similar.similar",
+      "mappedBy": "items"
+    },
+    "colors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::color.color",
+      "inversedBy": "items"
+    },
+    "season": {
+      "type": "enumeration",
+      "enum": [
+        "Spring/Summer",
+        "Autumn/Winter",
+        "Resort",
+        "Pre-Fall"
+      ]
+    },
+    "year": {
+      "type": "integer",
+      "unique": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "items"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
