@@ -9,7 +9,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-cloud": "4.19.1",
     "@strapi/plugin-color-picker": "^4.19.1",
@@ -39,6 +38,7 @@
     "strapi-plugin-sitemap": "^3.0.8",
     "strapi-plugin-slugify": "^2.3.8",
     "strapi-provider-email-resend": "^1.0.4",
+    "strapi-provider-upload-cloudflare-2": "^0.1.4",
     "styled-components": "5.3.3"
   },
   "author": {
