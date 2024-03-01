@@ -26,8 +26,8 @@
     },
     "image": {
       "type": "media",
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ]
@@ -63,7 +63,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::person.person",
-      "inversedBy": "outfits"
+      "inversedBy": "outfits",
+      "required": true
     },
     "tags": {
       "type": "relation",

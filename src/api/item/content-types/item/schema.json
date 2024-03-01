@@ -65,7 +65,8 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::brand.brand",
-      "inversedBy": "items"
+      "inversedBy": "items",
+      "required": true
     },
     "similars": {
       "type": "relation",
