@@ -18,26 +18,9 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "color": {
-      "type": "enumeration",
-      "enum": [
-        "Blue",
-        "Green",
-        "White",
-        "Beige",
-        "Brown",
-        "Black",
-        "Red",
-        "Purple",
-        "Aqua"
+        "images"
       ]
     },
     "link": {
@@ -53,7 +36,8 @@
       "unique": false
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "outfits": {
       "type": "relation",
@@ -78,7 +62,8 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::color.color",
-      "inversedBy": "items"
+      "inversedBy": "items",
+      "required": true
     },
     "season": {
       "type": "enumeration",

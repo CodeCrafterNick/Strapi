@@ -12,10 +12,13 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "items": {
       "type": "relation",
