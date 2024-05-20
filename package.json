@@ -21,7 +21,7 @@
     "@strapi/provider-email-mailgun": "^4.20.1",
     "@strapi/provider-email-nodemailer": "^4.20.1",
     "@strapi/provider-upload-cloudinary": "^4.20.2",
-    "@strapi/strapi": "4.19.1",
+    "@strapi/strapi": "4.24.2",
     "@treblle/strapi": "^0.0.12",
     "better-sqlite3": "8.6.0",
     "nanoid": "^5.0.5",
